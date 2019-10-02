@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,800");
+* { margin: 0; padding: 0; box-sizing: border-box; font-weight: 400; text-decoration: none; list-style: none; }
+
+/* ------ */
+/* ------ FUENTES */
+/* ------ */
+::selection { background-color: #009688; color: whitesmoke; }
+
+/* ----------------------------- */
+h1 { font-size: 5em; }
+
+h2 { font-size: 3.5em; }
+
+h3 { font-size: 2.7em; }
+
+h4 { font-size: 2em; }
+
+h5 { font-size: 1.45em; }
+
+h6 { font-size: 0.8em; }
+
+p { font-size: 1em; }
+
+/* -----------------------------------------*/
+body { font-family: 'Open Sans', sans-serif; background: #e6e6e6; text-rendering: auto; }
+
+.home { display: flex; flex-flow: wrap row; justify-content: center; align-items: center; width: 100%; height: 100vh; background: url(../img/bgs/bg4.jpeg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; }
+.home .red_sect { background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, rgba(0, 150, 136, 0.75)); width: 75%; height: 100%; display: flex; flex-flow: wrap column; justify-content: center; align-items: flex-start; padding-left: 20%; }
+.home .red_sect h5 { color: #eceaed; margin-bottom: 0.1em; font-size: 1.73em; }
+.home .red_sect h1 { font-weight: 800; color: #f5f4f3; line-height: 1.04em; font-size: 6em; }
+.home .red_sect h6 { font-size: 1.3em; font-weight: 300; color: gainsboro; margin-top: 0.5em; background: rgba(35, 35, 35, 0.6); padding: 0.15em 0.4em; }
+.home .black_sect { background: rgba(40, 40, 40, 0.84); width: 25%; height: 100%; display: flex; flex-flow: wrap column; justify-content: center; align-items: center; }
+.home .black_sect img { width: 14em; border-radius: 50%; }
+.home .black_sect h5 { color: #d1d3d0; font-weight: 300; margin: 2.8em 0 0.5em; }
+.home .black_sect ul { display: flex; flex-flow: wrap row; justify-content: space-around; align-items: center; width: 13em; }
+.home .black_sect ul li a { color: #d1d3d0; font-size: 1.8em; }
+
+.title { display: flex; flex-flow: wrap row; justify-content: flex-start; align-items: center; }
+.title hr { border: none; height: 7px; border-radius: 15px; background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4); transition: all 0.5s ease-out; }
+.title .hr1 { width: 5em; }
+.title .hr2 { width: 1em; margin-left: 0.45em; background: linear-gradient(60deg, #4dfdd4 15%, rgba(33, 150, 243, 0.75)); }
+.title h1 { color: #5a5a5a; font-weight: 300; text-transform: uppercase; font-size: 3em; margin-left: 0.2em; }
+.title h1 span { font-weight: 700; }
+
+.about { display: flex; flex-flow: wrap column; justify-content: center; align-items: flex-start; padding: 6em 10%; background: whitesmoke; }
+.about p { color: #5a5a5a; font-weight: 400; font-size: 1.2em; margin: 1.5em 0; }
+.about p a { color: #2196F3; }
+.about .cv { background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4); color: white; font-size: 0.9em; font-weight: 600; padding: 1em 2.5em; border-radius: 4px; }
+
+/* SECCION DE trabajos */
+.works { display: flex; flex-flow: wrap column; justify-content: center; align-items: flex-start; background: white; padding: 6em 10%; }
+.works .w_list { width: 100%; padding: 1em 0; display: flex; flex-flow: wrap row; justify-content: space-between; align-items: center; }
+.works .w_list .work { height: 20em; width: 20em; margin: 1em 0; border-radius: 4px; background-size: contain !important; background-repeat: no-repeat !important; background-position-y: 50% !important; }
+.works .w_list .work .w_info { opacity: 0; display: flex; flex-flow: wrap column; justify-content: center; align-items: center; height: 100%; border-radius: 4px; transition: all .3s ease-out; padding: 0 1em; background: linear-gradient(40deg, #2196f3 25%, #3cf9e7); }
+.works .w_list .work .w_info .w_title { color: white; font-size: 1.2em; font-weight: 600; text-align: center; }
+.works .w_list .work .w_info .w_desc { color: white; text-align: center; }
+.works .w_list .work .w_info .w_line { display: flex; flex-flow: wrap row; justify-content: flex-start; align-items: center; margin: 0.75em 0; }
+.works .w_list .work .w_info .w_line hr { border: none; height: 5px; border-radius: 15px; background: white; }
+.works .w_list .work .w_info .w_line .wl1 { width: 4em; margin-right: 0.4em; }
+.works .w_list .work .w_info .w_line .wl2 { width: 1em; }
+.works .w_list .work:hover > .w_info { opacity: 1; }
+
+/* FIN DE SECCION DE trabajos */
+/* SECCION DE SKILLS */
+.skills { display: flex; flex-flow: wrap column; justify-content: center; align-items: flex-start; padding: 6em 10% 9em; }
+.skills .sk_info { width: 100%; display: flex; flex-flow: wrap row; justify-content: space-between; align-items: center; }
+.skills .sk_info .sk_text { width: 50%; }
+.skills .sk_info .sk_text p { color: #5a5a5a; font-weight: 400; font-size: 1.2em; }
+.skills .sk_info .sk_text p span { color: #3383c3; }
+.skills .sk_info .sk_slids { width: 40%; }
+.skills .sk_info .sk_slids li { display: flex; flex-flow: wrap column; justify-content: center; align-items: center; margin-bottom: 1em; }
+.skills .sk_info .sk_slids li .sk_txt { display: flex; flex-flow: wrap row; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 0.5em; }
+.skills .sk_info .sk_slids li .sk_txt p { color: #2196F3; font-weight: 600; font-size: 0.9em; }
+.skills .sk_info .sk_slids li .sk_txt h5 { color: #2196f3; font-size: 1.4em; }
+.skills .sk_info .sk_slids li .slide { background: white; width: 100%; height: 5px; }
+.skills .sk_info .sk_slids li .slide .relle { background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4); height: 100%; width: 95%; }
+.skills .sk_info .sk_slids .bkd .sk_txt p { color: #e4483c; }
+.skills .sk_info .sk_slids .bkd .sk_txt h5 { color: #e4483c; }
+.skills .sk_info .sk_slids .bkd .slide .relle { width: 60%; background: linear-gradient(60deg, #e83a13 15%, #e68c8cbd); }
+.skills .sk_info .sk_slids .uxi .sk_txt p { color: #5ada5e; }
+.skills .sk_info .sk_slids .uxi .sk_txt h5 { color: #5ada5e; }
+.skills .sk_info .sk_slids .uxi .slide .relle { width: 60%; background: -webkit-linear-gradient(330deg, #5ADA5E 15%, #4bf185); background: -o-linear-gradient(330deg, #5ADA5E 15%, #4bf185); background: linear-gradient(60deg, #5ADA5E 15%, #4bf185); }
+.skills .sk_info .sk_slids .otw .sk_txt p { color: #FF9800; }
+.skills .sk_info .sk_slids .otw .sk_txt h5 { color: #FF9800; }
+.skills .sk_info .sk_slids .otw .slide .relle { width: 70%; background: linear-gradient(60deg, #FF9800 15%, #FFE082); }
+
+/* FIN DE SECCION DE SKILLS*/
+/* SECCION DE CONTACTO */
+footer { width: 100%; height: 10em; padding: 2em 10%; display: flex; flex-flow: wrap column; justify-content: center; align-items: center; background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, rgba(0, 150, 136, 0.75)); }
+footer .contact { background: white; width: 100%; padding: 2em; position: relative; bottom: 3em; }
+footer .contact .ti { display: flex; flex-flow: wrap row; justify-content: space-between; align-items: center; margin-bottom: 4em; }
+footer .contact .ti p { color: #5a5a5a; }
+footer .contact .ti p span { color: #0077b5; font-weight: 600; }
+footer .contact .ft h1 { font-size: 2em; }
+footer .contact .ft .hr1 { width: 3em; }
+footer .contact .data { display: flex; flex-flow: wrap row; justify-content: space-between; align-items: center; }
+footer .contact .data .mail, footer .contact .data .loc, footer .contact .data .f_redes { display: flex; flex-flow: wrap row; justify-content: center; align-items: center; }
+footer .contact .data .mail p, footer .contact .data .loc p, footer .contact .data .f_redes p { color: #464646; font-weight: 600; font-size: 1em; margin-left: 0.5em; }
+footer .contact .data .mail .icon-envelop, footer .contact .data .mail .icon-location, footer .contact .data .loc .icon-envelop, footer .contact .data .loc .icon-location, footer .contact .data .f_redes .icon-envelop, footer .contact .data .f_redes .icon-location { font-size: 1.2em; color: #3383c3; }
+footer .contact .data .mail .icon-linkedin, footer .contact .data .loc .icon-linkedin, footer .contact .data .f_redes .icon-linkedin { color: #0077b5; }
+footer .contact .data .mail .icon-instagram, footer .contact .data .loc .icon-instagram, footer .contact .data .f_redes .icon-instagram { color: #e13d63; margin: 0 0.5em; }
+footer .contact .data .mail .icon-twitter, footer .contact .data .loc .icon-twitter, footer .contact .data .f_redes .icon-twitter { color: #1da1f2; }
+footer .contact .data .f_redes span { font-size: 1.6em; }
+footer .contact .data .f_redes p { margin-right: 0.5em; }
+
+/* FIN DE SECCION DE CONTACTO */
+#back-top { position: fixed; bottom: 30px; right: 20px; }
+
+#back-top a { display: block; color: #bbb; /* background color transition */ -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; }
+
+#back-top a:hover { color: #000; }
+
+/* arrow icon (span tag) */
+#back-top span { background: -webkit-linear-gradient(330deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4); background: -o-linear-gradient(330deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4); background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4); color: white; font-size: 3em; border-radius: 4px; }
+
+#back-top a:hover span { background-color: #b9b9b9; }
+
+.fixed { position: fixed; top: 0; z-index: 99; }
+
+@media screen and (max-width: 415px) { body .title h1 { font-size: 2em; }
+  body .title .hr1 { width: 3em; }
+  body .home { display: flex; flex-flow: wrap column; justify-content: center; align-items: center; height: inherit; }
+  body .home .red_sect { height: inherit; width: 100%; padding: 2em 5%; }
+  body .home .red_sect h1 { font-size: 3em; }
+  body .home .black_sect { height: inherit; width: 100%; padding: 2em 0; }
+  body .skills .sk_info { display: flex; flex-flow: wrap column; justify-content: center; align-items: center; }
+  body .skills .sk_info .sk_text { width: inherit; margin-top: 2em; }
+  body .skills .sk_info .sk_slids { width: inherit; padding: 3em 0; }
+  body footer { height: 21em; }
+  body footer .contact .data { display: flex; flex-flow: wrap column; justify-content: center; align-items: center; }
+  body footer .contact .data .loc { padding: 0.5em 0; } }
+
+/*# sourceMappingURL=styles.css.map */

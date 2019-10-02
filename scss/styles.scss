@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,800');
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	font-weight:400;
+	text-decoration:none;
+	list-style:none;
+}
+
+
+// PALETA DE COLORES A UTILIZAR..
+
+/* ------ */
+
+$rojo1:rgb(144, 43, 43);
+$negrobg:rgb(45,45,45);
+
+$bg-grad:linear-gradient(60deg, #2196F3 15%, #009688);
+
+$celes:#2196F3;
+$verde:#009688;
+
+/* ------ FUENTES */
+
+$blancof1:rgb(255,255,255);
+$blancof2:rgb(245,244,243);
+$blancof3:rgb(236,234,237);
+$blancof4:rgb(220,220,220);
+
+/* ------ */ 
+// FIN DE PALETA DE COLORES DE MATERIAL..
+
+@mixin row-bt(){
+	display: flex;
+	flex-flow:wrap row;
+	justify-content:space-between;
+	align-items:center;
+}
+
+@mixin row-ct(){
+	display: flex;
+	flex-flow:wrap row;
+	justify-content:center;
+	align-items:center;
+}
+
+@mixin row-st(){
+	display: flex;
+	flex-flow:wrap row;
+	justify-content:flex-start;
+	align-items:center;
+}
+
+@mixin col-ct(){
+	display: flex;
+	flex-flow:wrap column;
+	justify-content:center;
+	align-items:center;
+}
+
+@mixin col-end(){
+	display: flex;
+	flex-flow:wrap column;
+	justify-content:center;
+	align-items: flex-end;
+}
+
+@mixin col-st(){
+	display: flex;
+	flex-flow:wrap column;
+	justify-content:center;
+	align-items: flex-start;
+}
+
+@mixin row-ar(){
+	display: flex;
+	flex-flow:wrap row;
+	justify-content:space-around;
+	align-items:center;
+}
+
+::selection {
+	background-color: $verde;
+	color: whitesmoke;
+}
+
+/* ----------------------------- */
+
+// RESET DE TAMAÑOS DE FUENTES
+
+h1{
+	font-size:5em;
+}
+h2{
+	font-size:3.5em;
+}
+h3{
+	font-size:2.7em;
+}
+h4{
+	font-size:2em;
+}
+h5{
+	font-size:1.45em;
+}
+h6{
+	font-size:0.8em;
+}
+
+p{
+	font-size:1em;
+}
+
+/* -----------------------------------------*/
+body{
+	font-family: 'Open Sans', sans-serif;
+	background:rgb(230,230,230);
+	text-rendering: auto;
+}
+
+// SECCION INICIO
+.home{
+	@include row-ct();
+	width:100%;
+	height: 100vh;
+	background:url(../img/bgs/bg4.jpeg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	.red_sect{
+		background:linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, rgba(0, 150, 136, 0.75));
+		width: 75%;
+		height: 100%;
+		@include col-st();
+		padding-left:20%;
+		h5{
+			color:$blancof3;
+			margin-bottom: 0.1em;
+			font-size: 1.73em
+		}
+		h1{
+			font-weight: 800;
+			color:$blancof2;
+			line-height: 1.04em;
+			font-size: 6em;
+		}
+		h6{
+			font-size: 1.3em;
+			font-weight: 300;
+			color:$blancof4;
+			margin-top: 0.5em;
+		    background: rgba(35,35,35,0.6);
+		    padding: 0.15em 0.4em;
+		}
+	}
+	.black_sect{
+		background:rgba(40, 40, 40, 0.84);
+		width: 25%;
+		height: 100%;
+		@include col-ct();
+		img{
+			width: 14em;
+			border-radius:50%;
+		}
+		h5{
+		    color: #d1d3d0;
+		    font-weight: 300;
+		    margin: 2.8em 0 0.5em;
+		}
+		ul{
+			@include row-ar();
+			width: 13em;
+			//padding:2.5em 0;
+			li{
+				a{
+					color: rgb(209,211,208);
+    				font-size: 1.8em;
+				}
+			}
+		}
+	}
+}
+
+// FIN SECCION INICIO
+.title{
+	@include row-st();
+	hr{
+	    border: none;
+	    height: 7px;
+	    border-radius: 15px;
+	    background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4);
+	    transition: all 0.5s ease-out;
+	}
+	.hr1{
+		width: 5em;
+	}
+	.hr2{
+		width: 1em;
+		margin-left:0.45em;
+	    background: linear-gradient(60deg,#4dfdd4 15%, rgba(33, 150, 243, 0.75));
+	}
+	h1{
+		color: rgb(90,90,90);
+		font-weight: 300;
+		text-transform: uppercase;
+	    font-size: 3em;
+	    margin-left: 0.2em;
+		span{
+			font-weight: 700;
+		}
+	}
+
+}
+// SECCION ABOUT ME
+
+.about{
+	@include col-st();
+	padding:6em 10%;
+	background:rgb(245,245,245);
+	p{
+		color: rgba(90, 90, 90, 1);
+	    font-weight: 400;
+	    font-size: 1.2em;
+	    margin:1.5em 0;
+		a{
+			color:$celes;
+		}
+	}
+	.cv{
+	    background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, rgb(77, 253, 212));
+	    color: white;
+	    font-size: 0.9em;
+	    font-weight: 600;
+	    padding: 1em 2.5em;
+	    border-radius: 4px;
+	}
+}
+
+
+// FIN DE SECCION ABOUT ME
+
+/* SECCION DE trabajos */ 
+
+.works{
+	@include col-st();
+	background:white;
+	padding:6em 10%;
+	.w_list{
+	    width: 100%;
+	    padding:1em 0;
+		@include row-bt();
+		.work{
+			// background:  !important;
+			height: 20em;
+    		width: 20em;
+    		margin:1em 0;
+    	    border-radius: 4px;
+		    background-size: contain !important;
+		    background-repeat: no-repeat !important;
+		    background-position-y: 50% !important;
+    		.w_info{
+    			opacity:0;
+				@include col-ct();
+    		    height: 100%;
+    		    border-radius: 4px;
+    			transition:all .3s ease-out;
+    			padding: 0 1em;
+    		    background: linear-gradient(40deg, rgb(33, 150, 243) 25%, #3cf9e7);
+    		    .w_title{
+				    color: white;
+				    font-size: 1.2em;
+				    font-weight: 600;
+				    text-align:center;
+    		    }
+    		    .w_desc{
+					color: white;
+					text-align:center;
+    		    }
+    		    .w_line{
+					@include row-st();
+					margin:0.75em 0;
+					hr{
+					    border: none;
+					    height: 5px;
+					    border-radius: 15px;
+					    background: rgb(255,255,255);
+					}
+					.wl1{
+						width: 4em;
+    					margin-right: 0.4em;
+					}
+					.wl2{
+						width: 1em;
+					}
+    		    }
+    		}
+    		&:hover>.w_info{
+    			opacity:1;
+    		}
+		}
+	}
+}
+
+
+/* FIN DE SECCION DE trabajos */ 
+
+/* SECCION DE SKILLS */
+
+.skills{
+	@include col-st();
+	padding:6em 10% 9em;
+	.sk_info{
+	    width: 100%;
+	    @include row-bt();
+	    .sk_text{
+	    	width: 50%;
+		    p{
+		        color: #5a5a5a;
+			    font-weight: 400;
+			    font-size: 1.2em;
+				span{
+			    	color: #3383c3;
+				}	    	
+		    }
+	    }
+		.sk_slids{
+			width: 40%;
+			li{
+				@include col-ct();
+				margin-bottom: 1em;
+				.sk_txt{
+					@include row-bt();
+					width: 100%;
+					margin-bottom: 0.5em;
+					p{
+					    color: #2196F3;
+					    font-weight: 600;
+					    font-size: 0.9em;
+					}
+					h5{
+					    color: #2196f3;
+ 					    font-size: 1.4em;
+					}
+				}
+				.slide{
+					background: rgb(255,255,255);
+					width: 100%;
+					height: 5px;
+					.relle{
+						background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4);
+						height: 100%;
+						width: 95%;
+					}
+				}
+			}
+			.bkd{
+				.sk_txt{
+					p{
+					    color: #e4483c;
+					}
+					h5{
+					    color: #e4483c;
+					}
+				}
+				.slide{
+					.relle{
+						width: 60%;
+					    background: linear-gradient(60deg, #e83a13 15%, #e68c8cbd);
+					}
+				}
+			}
+			.uxi{
+				.sk_txt{
+					p{
+					    color: #5ada5e;
+					}
+					h5{
+					    color: #5ada5e;
+					}
+				}
+				.slide{
+					.relle{
+						width: 60%;
+						background: -webkit-linear-gradient(330deg, #5ADA5E 15%, #4bf185);
+						background: -o-linear-gradient(330deg, #5ADA5E 15%, #4bf185);
+						background: linear-gradient(60deg, #5ADA5E 15%, #4bf185);
+					}
+				}
+			}
+			.otw{
+				.sk_txt{
+					p{
+					    color: #FF9800;
+					}
+					h5{
+					    color: #FF9800;
+					}
+				}
+				.slide{
+					.relle{
+						width: 70%;
+					    background: linear-gradient(60deg, #FF9800 15%, #FFE082);
+					}
+				}
+			}
+		}
+	}
+}
+
+/* FIN DE SECCION DE SKILLS*/
+/* SECCION DE CONTACTO */
+footer{
+	width: 100%;
+    height: 10em;
+	padding:2em 10%;
+	@include col-ct();
+	background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, rgba(0, 150, 136, 0.75));
+	.contact{
+		background: white;
+		width: 100%;
+		padding:2em;
+	    position: relative;
+    	bottom: 3em;
+    	.ti{
+    		@include row-bt();
+    		margin-bottom:4em;
+    		p{
+    			color: #5a5a5a;
+    			span{
+    			    color: #0077b5;
+    				font-weight: 600;
+    			}
+    		}
+    	}
+		.ft{
+			h1{
+				font-size:2em;
+			}
+			.hr1{
+				width: 3em;
+			}
+		}
+		.data{
+			@include row-bt();
+			.mail,.loc,.f_redes{
+				@include row-ct();
+				p{
+				    color: #464646;
+				    font-weight: 600;
+				    font-size: 1em;
+				    margin-left:0.5em;
+				}
+				.icon-envelop,.icon-location{
+					font-size:1.2em;
+					color:#3383c3;
+				}
+				.icon-linkedin{
+					color:#0077b5;
+				}
+				.icon-instagram{
+					color:#e13d63;
+					margin:0 0.5em;
+				}
+				.icon-twitter{
+					color:#1da1f2;
+				}
+			}
+			.f_redes{
+				span{
+					font-size:1.6em;
+				}
+				p{
+					margin-right:0.5em;
+				}
+			}
+		}
+	}
+}
+/* FIN DE SECCION DE CONTACTO */
+
+// click to TOP
+#back-top {
+	position: fixed;
+	bottom: 30px;
+	right:20px;
+}
+#back-top a {
+	display: block;
+	color: #bbb;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover {
+	color: #000;
+}
+/* arrow icon (span tag) */
+#back-top span {
+    background: -webkit-linear-gradient(330deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4);
+    background: -o-linear-gradient(330deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4);
+    background: linear-gradient(60deg, rgba(33, 150, 243, 0.75) 15%, #4dfdd4);
+    color: white;
+    font-size: 3em;
+    border-radius: 4px;
+}
+#back-top a:hover span {
+	background-color: rgb(185,185,185);
+}
+// FIN DE click to TOP
+
+
+
+
+.fixed{
+	position:fixed;
+	top:0;
+    z-index: 99;
+}
+
+// CODIGO QUE EJECUTA EL RESPONSIVE
+
+@media screen and (max-width: 415px){ //PARA CELULAR
+	body{
+		.title{
+			h1{
+			    font-size: 2em;
+			}
+			.hr1{
+				width: 3em;
+			}
+		}
+		.home{
+			@include col-ct();
+		    height: inherit;
+		    .red_sect{
+		    	height: inherit;
+		    	width: 100%;
+		        padding: 2em 5%;
+		        h1{
+		        	font-size: 3em;
+		        }
+		    }
+		    .black_sect{
+		    	height: inherit;
+		    	width: 100%;
+		    	padding: 2em 0;
+		    }
+		}
+		.skills{
+			.sk_info{
+				@include col-ct();
+				.sk_text{
+					width: inherit;
+					margin-top: 2em;
+				}
+				.sk_slids{
+					width: inherit;
+					padding: 3em 0;
+				}
+			}
+		}
+		footer{
+		    height: 21em;
+			.contact{
+				.data{
+					@include col-ct();
+					.loc{
+					    padding: 0.5em 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 926px) and (min-width: 415px){ //PARA TABLET
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 150px){ //PARA TABLET
+
+}
